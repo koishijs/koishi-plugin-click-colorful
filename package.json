@@ -1,0 +1,56 @@
+{
+  "name": "koishi-plugin-click-colorful",
+  "description": "Add colorful click effects to your console",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "author": "Shigma <shigma10826@gmail.com>",
+  "scripts": {
+    "build": "tsc -b && koishi-console build"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koishijs/koishi-plugin-click-colorful.git"
+  },
+  "bugs": {
+    "url": "https://github.com/koishijs/koishi-plugin-click-colorful/issues"
+  },
+  "homepage": "https://github.com/koishijs/koishi-plugin-click-colorful",
+  "keywords": [
+    "bot",
+    "chatbot",
+    "koishi",
+    "plugin",
+    "console",
+    "release",
+    "update",
+    "click-colorful"
+  ],
+  "koishi": {
+    "description": {
+      "en": "Add colorful click effects to your console",
+      "zh": "为你的控制台增加色彩丰富的点击特效"
+    },
+    "services": {
+      "required": [
+        "console"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@koishijs/plugin-console": "^5.0.0",
+    "koishi": "^4.10.4"
+  },
+  "devDependencies": {
+    "@koishijs/client": "^5.1.2",
+    "@koishijs/plugin-console": "^5.1.2",
+    "@types/node": "^18.11.18",
+    "koishi": "^4.11.1",
+    "typescript": "^4.9.4"
+  }
+}
