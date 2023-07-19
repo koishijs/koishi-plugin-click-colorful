@@ -18,7 +18,13 @@ export default class Colorful extends DataService<{}> {
   constructor(ctx: Context) {
     super(ctx, 'colorful')
 
-    ctx.console.addEntry({
+    ctx.console.addEntry(process.env.KOISHI_BASE ? [
+      process.env.KOISHI_BASE + '/dist/index.js',
+      process.env.KOISHI_BASE + '/dist/style.css',
+    ] : process.env.KOISHI_ENV === 'browser' ? [
+      // @ts-ignore
+      import.meta.url.replace(/\/src\/[^/]+$/, '/client/index.ts'),
+    ] : {
       dev: resolve(__dirname, '../client/index.ts'),
       prod: resolve(__dirname, '../dist'),
     })
