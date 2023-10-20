@@ -35,6 +35,7 @@ class Ball {
       ball.style.zIndex = '9999'
       ball.style.opacity = '0'
       if (curLoop === 0) ball.style.opacity = '1'
+      ball.style.pointerEvents = 'none'
       ball.style.transform = 'translate3d(0px, 0px, 0px) scale(1)'
       ball.style.webkitTransform = 'translate3d(0px, 0px, 0px) scale(1)'
       ball.style.transition = 'transform 1s ' + curLoop * loopTimer / 1000 + 's ease-out'
